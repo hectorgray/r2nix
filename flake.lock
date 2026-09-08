@@ -1,0 +1,89 @@
+{
+  "nodes": {
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788450739,
+        "narHash": "sha256-glZLQlzIn1fXH6PazR2iUmTo7kzzyYSshrWhLS9TqCU=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "31729ca8cbdb4fa927b34e5f4353e6a83f39e993",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "hm-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1788651960,
+        "narHash": "sha256-v9wJd32eZ2bvhBzVOd7TIjLQd011P7nwOhjKtWlci5I=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "2c0350c759688177331b8f5242311fae8877bdb3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1788775869,
+        "narHash": "sha256-JRf1lSypbvKj6AzUZHpUA6YC1DirVuitZWOnRwcm+Ww=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "58973d74f1893afe13f5902919803a0e99da0ca4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-parts": "flake-parts",
+        "hm-src": "hm-src",
+        "nixpkgs": "nixpkgs",
+        "sugar": "sugar"
+      }
+    },
+    "sugar": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788067179,
+        "narHash": "sha256-H0tWtkAcO5GdkwGR0uSzH2TNUKmfaOd+S0a06Ns+A8E=",
+        "owner": "hectorgray",
+        "repo": "nix-sugar",
+        "rev": "d7f1685bd21fdbdcb6a142964256e960f4432265",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hectorgray",
+        "repo": "nix-sugar",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
