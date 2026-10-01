@@ -4,14 +4,14 @@
   perSystem = { pkgs, lib, ... }: {
     packages.arf = pkgs.rustPlatform.buildRustPackage rec {
       pname = "arf-console";
-      version = "0.5.2";
+      version = "0.5.3";
       doCheck = false;
 
       src = pkgs.fetchFromGitHub {
         owner = "eitsupi";
         repo = "arf";
         rev = "v${version}";
-        hash = "sha256-cmIx03Ll5HryrrHAmQ2B5WenAmIWqehCM3MzjoGSvyk=";
+        hash = "sha256-Ema0s5whJwYY9Bg3HSKf1XFWqANzuoJgpqSVsVKBoWg=";
       };
 
       cargoLock = {
