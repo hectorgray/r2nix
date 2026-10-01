@@ -3,17 +3,18 @@
 {
   perSystem = { pkgs, inputs', ... }: {
     devShells.default = pkgs.mkShell {
-      packages = (with pkgs; [
-        R
-        air-formatter # inputs' dep.
-      ]) ++ (with pkgs.rPackages; [
+      packages = (with pkgs.rPackages; [
+        languageserver
         # devtools
         # tidyverse
-        languageserver
       ]) ++ (with inputs'.r2nix.packages; [
         arf
+        data-dict
         positron-bin # launch with `positron .`
         quarto
+      ]) ++ (with pkgs; [
+        R
+        air-formatter # inputs' dep.
       ]);
     };
   };
