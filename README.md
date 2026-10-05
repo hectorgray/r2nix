@@ -36,7 +36,3 @@ inputs.r2nix = {
 
 Files in `_archive/` are kept for reference and are not included in this
 flake's outputs.
-
-### Home Modules
-
-- `positron`: upstreamed in nix-community/home-manager#9805

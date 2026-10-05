@@ -14,3 +14,6 @@
     ];
   };
 }
+
+# Upstreamed:
+# https://github.com/nix-community/home-manager/pull/9805
