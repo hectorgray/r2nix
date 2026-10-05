@@ -4,14 +4,10 @@
   imports = [ inputs.treefmt-nix.flakeModule ];
 
   perSystem = { pkgs, ... }: {
-    treefmt.settings.formatter = {
-      air = {
-        command = "${pkgs.air-formatter}/bin/air";
-        includes = [ "*.R" "*.r" ];
-        options = [ "format" ];
-      };
+    treefmt = {
+      programs.air.enable = true;
 
-      panache = let
+      settings.formatter.panache = let
         cfg = pkgs.writers.writeTOML "panache.toml" {
           formatters.r = "air";
           formatters.air.cmd = "${pkgs.air-formatter}/bin/air";
@@ -26,6 +22,5 @@
 }
 
 # Tracking:
-# https://github.com/numtide/treefmt-nix/pull/522
 # https://github.com/numtide/treefmt-nix/pull/503
 # https://github.com/posit-dev/air/issues/111
